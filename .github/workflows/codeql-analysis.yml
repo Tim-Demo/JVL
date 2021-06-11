@@ -29,6 +29,11 @@ jobs:
         distribution: 'adopt'
     - name: Build with Maven
       run: mvn clean install -DskipTests=true
+    
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v1
+      with:
+        languages: Java
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
