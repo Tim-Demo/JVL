@@ -38,3 +38,13 @@ jobs:
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
+    
+    - name: 'Upload Artifact'
+      uses: actions/upload-artifact@v2
+      with:
+        name: LGTM-Sarif
+        path: /home/runner/work/JVL/results/java-builtin.sarif
+        retention-days: 1
+
+      
+      
